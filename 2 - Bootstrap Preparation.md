@@ -72,10 +72,11 @@ EOF
 curl -O <https://downloads.mesosphere.io/blah blah blah (get the most recent url from the support site)>
 ```
 
-### Create Password Hash (put it in config.yaml @ <HashGoesHere>)
+### Create Password Hash
 ```
 sudo bash dcos_generate_config.ee.sh --hash-password <default-user-ID>
 ```
+copy the text output of the command and replace `<HashGoesHere>` in the config.yaml file you created earlier with it.
 
 ### Create the Docker Container
 ```
