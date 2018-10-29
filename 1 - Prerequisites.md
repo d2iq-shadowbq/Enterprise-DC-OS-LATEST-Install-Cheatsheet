@@ -2,6 +2,11 @@
 
 ## Prepare Node
 
+### Log In and change to SU
+```
+sudo su
+```
+
 ### Allow SUDO commands to run without password
 ```
 sudo visudo
@@ -76,6 +81,11 @@ sudo localectl set-locale LANG=en_US.utf8
 sudo reboot
 ```
 
+### Log Back In and change to SU
+```
+sudo su
+```
+
 ### Install, Start, and Enable Docker CE with OverlayFS on CentOS/RedHat
 
 If you want to install the latest Docker CE... Do This.
@@ -109,10 +119,13 @@ curl -fLsSv --retry 20 -Y 100000 -y 60 -o /tmp/docker-engine-selinux-1.13.1-1.el
  https://yum.dockerproject.org/repo/main/centos/7/Packages/docker-engine-selinux-1.13.1-1.el7.centos.noarch.rpm
 yum -y localinstall /tmp/docker*.rpm || true
 systemctl enable docker
+
+sudo docker pull nginx
+sudo docker ps
 ```
 
 ### Reboot Again
 ```
 sudo reboot
 ```
-
+Procees to step "2" and prepare your bootstrap node.
