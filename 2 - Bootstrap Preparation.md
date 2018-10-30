@@ -1,4 +1,4 @@
-# Enterprise DC/OS 1.12 BETA - Prepare Bootstrap Node
+# Enterprise DC/OS 1.12 - Prepare Bootstrap Node
 After installing the "Prerequisites" on all nodes including the bootstrap nodes, do the following on the server designated as the Bootstrap node.
 
 ### Create Bootstrap Directories in Home Directory
@@ -34,8 +34,10 @@ EOF
 ### Create public-ip-detect
 The following script uses the `dig` command and opendns to determine the public ip of the cluster.
 ```
+cat > genconf/public-ip-detect << 'EOF'
 #!/usr/bin/env bash
 dig +short myip.opendns.com @resolver1.opendns.com
+EOF
 ```
 
 ### Create license.txt file
