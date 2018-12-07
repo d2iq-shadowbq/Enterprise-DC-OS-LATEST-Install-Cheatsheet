@@ -1,5 +1,7 @@
 # Enterprise DC/OS 1.12 Prerequisites Installation Guide
 
+The prerequisites are to be run one every cluster node (Masters, Public Agent, Private Agent) including the Bootstrap node
+
 ## Prepare Node
 
 ### Log In and change to SU
@@ -28,6 +30,7 @@ sudo yum install -y yum-utils xz bash net-utils bind-utils coreutils gawk gettex
 ```
 
 ### Install and Configure NTP
+Time synchronization is especially important for the master nodes to converge into a cluster control plane.  Please ensure that they are coirrectly synced prior to instlling the system.  Common places of trouble are excessive d=rift preventing resync, or BIOS hardware clocks that are not properly synchronized
 ```
 sudo yum remove -y chrony
 sudo yum install -y ntp
@@ -88,29 +91,7 @@ sudo su
 
 ### Install, Start, and Enable Docker CE with OverlayFS on CentOS/RedHat
 
-If you want to install the latest Docker CE... Do This.
-```
-sudo echo 'overlay' >> /etc/modules-load.d/overlay.conf
-sudo modprobe overlay
-
-sudo yum update --exclude=docker-engine,docker-engine-selinux,centos-release* --assumeyes --tolerant
-
-sudo yum remove docker docker-common docker-selinux docker-engine
-
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-
-sudo yum list docker-ce --showduplicates | sort -r
-
-sudo yum install docker-ce
-
-sudo systemctl start docker
-sudo systemctl enable docker
-
-sudo docker pull nginx
-sudo docker ps
-```
-
-If you want to install an older version of Docker, do this.
+The official Mesosphere supported version of Docker is the Red Hat fork of version 1.13.1-1el7.  It can be installed as below.
 ```
 echo ">>> Install Docker"
 curl -fLsSv --retry 20 -Y 100000 -y 60 -o /tmp/docker-engine-1.13.1-1.el7.centos.x86_64.rpm \
