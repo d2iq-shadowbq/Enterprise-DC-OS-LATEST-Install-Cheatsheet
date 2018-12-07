@@ -82,7 +82,7 @@ sudo reboot
 sudo su
 ```
 
-### Install, Start, and Enable Docker CE with OverlayFS on CentOS/RedHat
+### Install, Start, and Enable Docker
 
 The official Mesosphere supported version of Docker is the Red Hat fork of version 1.13.1-1el7.  It can be installed as below.
 ```
