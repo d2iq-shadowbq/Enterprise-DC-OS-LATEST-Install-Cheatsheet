@@ -46,13 +46,6 @@ sudo chmod +x ./jq
 sudo cp jq /usr/bin
 ```
 
-### Disable ipV6 (This section suspect)
-```
-sudo sed -i -e 's/Defaults    requiretty/#Defaults    requiretty/g' /etc/sudoers
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-```
-
 ### Stop # Disable "firewalld"
 ```
 sudo systemctl stop firewalld && sudo systemctl disable firewalld
