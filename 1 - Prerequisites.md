@@ -86,6 +86,7 @@ sudo su
 
 The official Mesosphere supported version of Docker is the Red Hat fork of version 1.13.1-1el7.  It can be installed as below.
 ```
+mkfs -t xfs -n ftype=1 /dev/sdc1
 echo ">>> Install Docker"
 curl -fLsSv --retry 20 -Y 100000 -y 60 -o /tmp/docker-engine-1.13.1-1.el7.centos.x86_64.rpm \
  https://yum.dockerproject.org/repo/main/centos/7/Packages/docker-engine-1.13.1-1.el7.centos.x86_64.rpm
