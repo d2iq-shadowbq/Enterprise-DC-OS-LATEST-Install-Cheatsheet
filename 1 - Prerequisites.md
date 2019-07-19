@@ -60,6 +60,7 @@ sudo systemctl stop dnsmasq && sudo systemctl disable dnsmasq.service
 ### Set SE Linux to Permissive
 ```
 sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+cat /etc/selinux/config | grep SELINUX=permissive
 ```
 
 ### Add Groups
@@ -89,6 +90,7 @@ The official Mesosphere supported version of Docker is the Red Hat fork of versi
 mkfs -t xfs -n ftype=1 /dev/sdc1
 echo ">>> Install Docker"
 curl -O  https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-18.09.2-3.el7.x86_64.rpm
+curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-cli-18.09.2-3.el7.x86_64.rpm
 yum -y localinstall ./docker*.rpm || true
 systemctl start docker
 systemctl enable docker
