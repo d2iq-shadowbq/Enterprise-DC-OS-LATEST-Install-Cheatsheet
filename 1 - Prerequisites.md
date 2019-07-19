@@ -88,11 +88,8 @@ The official Mesosphere supported version of Docker is the Red Hat fork of versi
 ```
 mkfs -t xfs -n ftype=1 /dev/sdc1
 echo ">>> Install Docker"
-curl -fLsSv --retry 20 -Y 100000 -y 60 -o /tmp/docker-engine-1.13.1-1.el7.centos.x86_64.rpm \
- https://yum.dockerproject.org/repo/main/centos/7/Packages/docker-engine-1.13.1-1.el7.centos.x86_64.rpm
-curl -fLsSv --retry 20 -Y 100000 -y 60 -o /tmp/docker-engine-selinux-1.13.1-1.el7.centos.noarch.rpm \
- https://yum.dockerproject.org/repo/main/centos/7/Packages/docker-engine-selinux-1.13.1-1.el7.centos.noarch.rpm
-yum -y localinstall /tmp/docker*.rpm || true
+curl -O  https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-18.09.2-3.el7.x86_64.rpm
+yum -y localinstall ./docker*.rpm || true
 systemctl start docker
 systemctl enable docker
 
