@@ -1,4 +1,5 @@
-# Enterprise DC/OS 1.12 Prerequisites Installation Guide
+# Enterprise DC/OS latest Prerequisites Installation Guide
+# Updated for 1.13
 
 The prerequisites are to be run one every cluster node (Masters, Public Agent, Private Agent) including the Bootstrap node
 
@@ -63,8 +64,7 @@ sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
 ### Add Groups
 ```
-sudo groupadd nogroup &&
-sudo groupadd docker
+sudo groupadd nogroup && sudo groupadd docker
 ```
 
 ### Set Locale
