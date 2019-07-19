@@ -92,7 +92,7 @@ echo ">>> Install Docker"
 curl -O  https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-18.09.2-3.el7.x86_64.rpm
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-cli-18.09.2-3.el7.x86_64.rpm
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
-yum -y localinstall ./docker*.rpm ./containerd*.rpm || true
+yum -y localinstall ./containerd*.rpm ./docker*.rpm || true
 systemctl start docker
 systemctl enable docker
 
