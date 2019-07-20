@@ -20,11 +20,11 @@ sudo visudo
 ```
 
 ### OPTIONAL: Set PS1 for each node
-edit /etc/bashrc
+edit /etc/bashrc (Comment out this line and add the following as below)
 
 \# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
 
-PS1='\u@\H:\w\$ ' 
+PS1='BOOTSTRAP \W $ ' 
 
 ### Update Centos to 7.5 If Necessary
 ```
