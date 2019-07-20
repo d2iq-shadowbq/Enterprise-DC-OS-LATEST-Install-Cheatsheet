@@ -10,7 +10,7 @@ It is broken into three steps:
 
 [3. Install:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/3%20-%20Installation.md)  Deploys individual software to the nodes based on the cluster node type
 
-FYI - Go to [github.com/dmennell](https://github.com/dmennell/Enterprise-DC-OS-1.12-Install-Cheatsheet) for 1.11 and 1.12 instructions.  Please make note that Centos & RHEL 7.5/7.6 are not officially supported as operating systems for Enterprise DC/OS 1.11
+FYI - Go to [github.com/dmennell](https://github.com/dmennell/Enterprise-DC-OS-1.12-Install-Cheatsheet) for 1.11 and 1.12 instructions.
 
-these instructions are my personal condensation of the Advanced Installer from the Enterprise DC/OS 1.12 documents abnd a few other of my personal best practices.  this repo is not affiliated with Mesosphere, Inc and is not supported by Mesosphere, Inc. in any way.
+These instructions are Dan's personal condensation of the Advanced Installer from the Enterprise DC/OS 1.12 documents and a few other of his personal best practices with updates from DC/OS 1.13 documentation.  This repo is not affiliated with Mesosphere, Inc and is not supported by Mesosphere, Inc. in any way.
 
