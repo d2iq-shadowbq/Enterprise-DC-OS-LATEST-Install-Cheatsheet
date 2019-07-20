@@ -1,5 +1,5 @@
 # Enterprise DC/OS 1.12 - Prepare Bootstrap Node
-After installing the "Prerequisites" on all nodes including the bootstrap nodes, do the following on the server designated as the Bootstrap node.
+After installing the ["Prerequisites"](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md) on all nodes including the bootstrap nodes, do the following on the server designated as the Bootstrap node.
 
 ### Create Bootstrap Directories in Home Directory
 ```
@@ -103,5 +103,5 @@ sudo docker run -d -p 80:80 -v ${PWD}/genconf/serve:/usr/share/nginx/html:ro ngi
 sudo docker ps
 ```
 
-Move on to Installing Nodes (Master, Private Agent, and Public Agent)
+[Move on to Installing Nodes (Master, Private Agent, and Public Agent)](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/3%20-%20Installation.md)
 
