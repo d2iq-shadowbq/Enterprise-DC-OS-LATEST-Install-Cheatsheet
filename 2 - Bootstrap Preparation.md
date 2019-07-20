@@ -1,4 +1,4 @@
-# Enterprise DC/OS 1.12 - Prepare Bootstrap Node
+# Enterprise DC/OS - Prepare Bootstrap Node
 After installing the ["Prerequisites"](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md) on all nodes including the bootstrap nodes, do the following on the server designated as the Bootstrap node.
 
 ### Create Bootstrap Directories in Home Directory
