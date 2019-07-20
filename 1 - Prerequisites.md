@@ -1,7 +1,11 @@
 # Enterprise DC/OS latest Prerequisites Installation Guide
-# Updated for 1.13
+## Updated for 1.13
 
 The prerequisites are to be run one every cluster node (Masters, Public Agent, Private Agent) including the Bootstrap node
+
+## Compatibility Matrix
+
+[DC/OS 1.13](https://docs.mesosphere.com/version-policy/)
 
 ## Prepare Node
 
