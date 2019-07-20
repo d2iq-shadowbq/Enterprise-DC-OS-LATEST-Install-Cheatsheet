@@ -4,9 +4,11 @@ This repository comprises my "cheatsheet" of steps to go from a "base Linux (Cen
 
 It is broken into three steps:
 
-[1. Prerequisites:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md): To be installed on all nodes including Boodstrap, Master, and Agents
-2.  Bootstrap Preparation:  Prepares the installation and configuration files on the Bootstrap node.
-3.  Install:  Deploys individual software to the nodes based on the cluster node type
+[1. Prerequisites:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md) To be installed on all nodes including Boodstrap, Master, and Agents
+
+[2. Bootstrap Preparation:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap%20Preparation.md) Prepares the installation and configuration files on the Bootstrap node.
+
+[3. Install:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/3%20-%20Installation.md)  Deploys individual software to the nodes based on the cluster node type
 
 FYI - I have used these instructions with Enterprise DC/OS 1.11 as well.  Please make note that Centos & RHEL 7.5 are not officially supported as operating systems for Enterprise DC/OS 1.11
 
