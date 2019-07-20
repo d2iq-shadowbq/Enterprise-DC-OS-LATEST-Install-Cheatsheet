@@ -100,4 +100,4 @@ sudo docker ps
 ```
 sudo reboot
 ```
-[Procees to step "2" and prepare your bootstrap node.](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap%20Preparation.md)
+[Proceed to step "2" and prepare your bootstrap node.](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap%20Preparation.md)
