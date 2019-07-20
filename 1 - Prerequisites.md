@@ -21,7 +21,9 @@ sudo visudo
 
 ### OPTIONAL: Set PS1 for each node
 edit /etc/bashrc
+
 \# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
+
 PS1='\u@\H:\w\$ ' 
 
 ### Update Centos to 7.5 If Necessary
