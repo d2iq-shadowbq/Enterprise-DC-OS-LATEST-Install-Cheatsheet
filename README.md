@@ -3,6 +3,7 @@
 This repository comprises my "cheatsheet" of steps to go from a "base Linux (Centos 7 or RHEL 7) to fully running DC/OS Cluster.
 
 It is broken into three steps:
+
 [1. Prerequisites:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md): To be installed on all nodes including Boodstrap, Master, and Agents
 2.  Bootstrap Preparation:  Prepares the installation and configuration files on the Bootstrap node.
 3.  Install:  Deploys individual software to the nodes based on the cluster node type
