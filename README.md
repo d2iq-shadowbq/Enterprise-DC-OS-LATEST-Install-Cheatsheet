@@ -1,4 +1,4 @@
-# Enterprise-DCOS-1.12-Install-Cheatsheet
+# Enterprise-DCOS-LATEST-Install-Cheatsheet
 
 This repository comprises my "cheatsheet" of steps to go from a "base Linux (Centos 7 or RHEL 7) to fully running DC/OS Cluster.
 
