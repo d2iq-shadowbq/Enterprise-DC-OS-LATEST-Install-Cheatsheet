@@ -18,7 +18,11 @@ sudo su
 ```
 sudo visudo
 ```
-scroll down and remove the `#` from the line that specifies whether or not to require password when running `sudo` commands
+
+### OPTIONAL: Set PS1 for each node
+edit /etc/bashrc
+\# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
+PS1='\u@\H:\w\$ ' 
 
 ### Update Centos to 7.5 If Necessary
 ```
