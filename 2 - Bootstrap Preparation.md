@@ -8,7 +8,16 @@ cd dcos-install
 ```
 
 ### Create IP-detect
-This is one example of creating an ip-detect script.  This assumes that the primary ethernet interface is `eth0`.  For cloud specific ip-detect scripts, please see the docs.
+This is one example of creating an ip-detect script.  This assumes that the primary ethernet interface is `eth0`.  For cloud specific ip-detect scripts, [please see the docs](https://docs.mesosphere.com/1.13/installing/production/deploying-dcos/installation/#create-an-ip-detection-script).
+
+### Check network interface name on-prem
+Need to know for ip-detect script below
+```
+ip addr
+
+ifconfig
+```
+
 ```
 cat > genconf/ip-detect << 'EOF'
 #!/usr/bin/env bash
