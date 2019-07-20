@@ -57,10 +57,12 @@ EOF
 ```
 
 ### Create config.yaml
+
+[Official Options:](https://docs.mesosphere.com/1.13/installing/production/deploying-dcos/configuration/examples/)
 This is an example config.yaml file with the minimum variables set.  The one optional variable set is the userID and password.  This is highly suggested if this cluster is to be at all exposed to the internet.  there are plenty of bitcoin miners out there that are looking for clusters with default user IDs and passwords.
 ```
 cat > genconf/config.yaml << 'EOF'
-bootstrap_url: http://<Bootstrap-IP-Address:Port>
+bootstrap_url: http://<Bootstrap-IP-Address>:80
 cluster_name: 'Cluster Name'
 fault_domain_enabled: True
 ip_detect_public_filename: genconf/public-ip-detect
