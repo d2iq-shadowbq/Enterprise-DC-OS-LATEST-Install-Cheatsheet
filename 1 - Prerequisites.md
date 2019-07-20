@@ -51,29 +51,13 @@ sudo chmod +x ./jq
 sudo cp jq /usr/bin
 ```
 
-### Stop # Disable "firewalld"
+### Stop # Disable "firewalld" | "dnsmasq" | SELINUX to Permissive | Add Groups | Set Locale
 ```
 sudo systemctl stop firewalld && sudo systemctl disable firewalld
-```
-
-### Stop # Disable "dnsmasq"
-```
 sudo systemctl stop dnsmasq && sudo systemctl disable dnsmasq.service
-```
-
-### Set SE Linux to Permissive
-```
 sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 cat /etc/selinux/config | grep SELINUX=permissive
-```
-
-### Add Groups
-```
 sudo groupadd nogroup && sudo groupadd docker
-```
-
-### Set Locale
-```
 sudo localectl set-locale LANG=en_US.utf8
 ```
 
@@ -88,11 +72,13 @@ sudo su
 ```
 
 ### Install, Start, and Enable Docker
-
-The official Mesosphere supported version of Docker is the Red Hat fork of version 1.13.1-1el7.  It can be installed as below.
+Got to figure this out by OS
 ```
 mkfs -t xfs -n ftype=1 /dev/sdc1
-echo ">>> Install Docker"
+```
+
+Docker 18.09 Install:
+```
 curl -O  https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-18.09.2-3.el7.x86_64.rpm
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-cli-18.09.2-3.el7.x86_64.rpm
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
