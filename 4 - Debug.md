@@ -5,6 +5,8 @@
     - If you didn't start with a brand new OS, then plan on this failing
 
     - Then a single private and single public node
+    
+    - 
 
 2. Most issues are in the config.yaml and ip-detect / public-ip-detect scripts
 
@@ -20,7 +22,7 @@
     
     - In node (to update): /opt/mesosphere/bin/detect-ip
     
-- public-ip-detect
+- ip-detect-public
 
     - Need to document
     
@@ -28,7 +30,13 @@
 
 - Priorities:
 
+    - systemctl status dcos-*
+        
+        - Find failured services then dig into logs
+
     - Zookeeper
+        
+        - journalctl -fu dcos-exhibitor
 
     - Admin Router
     
