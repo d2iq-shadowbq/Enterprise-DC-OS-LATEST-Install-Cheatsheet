@@ -2,19 +2,19 @@
 
 1. Start with 1 master and make sure it goes all the way through
 
-    - If you didn't start with a brand new OS, then plan on this failing
+  - If you didn't start with a brand new OS, then plan on this failing
 
-    - Then a single private and single public node
+  - Then a single private and single public node
     
-    - 
+  - 
 
 2. Most issues are in the config.yaml and ip-detect / public-ip-detect scripts
 
-- Config.yaml
+  - Config.yaml
 
     - Check Master / Node IPs 3 times to make sure that they are correct
     
-- ip-detect
+  - ip-detect
 
     - Check in each node
     
@@ -22,7 +22,7 @@
     
     - In node (to update): /opt/mesosphere/bin/detect-ip
     
-- ip-detect-public
+  - ip-detect-public
 
     - Need to document
     
@@ -30,18 +30,24 @@
 
 - Priorities:
 
-    - systemctl status dcos-*
+  - systemctl status dcos-*
         
-        - Find failured services then dig into logs
+    - Find failured services then dig into logs
 
-    - Zookeeper
+  - Zookeeper
         
-        - journalctl -fu dcos-exhibitor
+    - journalctl -fu dcos-exhibitor
 
-    - Admin Router
+  - Admin Router
     
-    - 
+    - journalctl -fu dcos-admin*?
+    
+  - Mesos Master(?)
+  
+    - journalctl -fu dcos-mesos-master?
     
 4. Forget about uninstallation to update something
+
+    - https://dcosjira.atlassian.net/browse/DCOS-250
  
     - If you want to try: https://groups.google.com/a/dcos.io/forum/#!topic/users/vDJyTXfEqqU
