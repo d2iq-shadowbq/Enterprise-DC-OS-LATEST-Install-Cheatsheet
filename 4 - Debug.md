@@ -6,9 +6,11 @@
 
   - Then a single private and single public node
     
-  - 
+  - Avoid pre-flight to force installation (just doesn't seem to work when needed)
+  
+    - bash dcos_install.sh master --disable-preflight
 
-2. Most issues are in the config.yaml and ip-detect / public-ip-detect scripts
+2. Most issues are in the config.yaml, ip-detect / public-ip-detect scripts or NTP
 
   - Config.yaml
 
@@ -25,6 +27,12 @@
   - ip-detect-public
 
     - Need to document
+    
+  - NTP
+
+    - Disable timecheck: Single master (or multi-masters on VMs (rebooted) - vulnerable though)
+    
+      - /opt/mesosphere/etc/check_time.env
     
 3. In the master node (or whatever is failing)
 
