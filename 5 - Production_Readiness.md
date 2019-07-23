@@ -131,7 +131,8 @@ DC/OS IAM ACLs Reference: https://docs.mesosphere.com/security/perms-
 }
 
 Note: DC/OS 1.10 will support frameworks that are deployed into Application Groups but for now you can manually override the DCOS_SERVICE_NAME, FRAMEWORK_NAME, FRAMEWORK_PRINCIPAL, FRAME WORK_ROLE and VIP labels
- e.g., Given a framework (Kafka) being deployed into: "id": "/dev/foo/bar/kafka", We have to override the following fields in env: "FRAMEWORK_NAME": "dev-foo-bar-kafka", "FRAMEWORK_PRINCIPAL": "dev-foo-bar-kafka-principal" "FRAMWEWORK_ROLE": "dev-foo-bar-kafka-role".  We have to override the following fields in labels: "DCOS_SERVICE_NAME": "dev-foo-bar-kafka",
+ 
+e.g., Given a framework (Kafka) being deployed into: "id": "/dev/foo/bar/kafka", We have to override the following fields in env: "FRAMEWORK_NAME": "dev-foo-bar-kafka", "FRAMEWORK_PRINCIPAL": "dev-foo-bar-kafka-principal" "FRAMWEWORK_ROLE": "dev-foo-bar-kafka-role".  We have to override the following fields in labels: "DCOS_SERVICE_NAME": "dev-foo-bar-kafka",
 And override the Kafka Scheduler API VIP label in portDefinitions
   "portDefinitions": [
     {
