@@ -1,5 +1,5 @@
 # Install Enterprise DC/OS Cluster Nodes
-[Back to bootstrap steps](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap%20Preparation.md)
+[Back to bootstrap steps](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap_Preparation.md)
 
 I suggest you start with the master node and wait for it to become fully healthy.  That way, you have a pretty good assurance that all of your prerequisites were done correctly.  In fact, I would install one of each type of node, and wait for it to become healthy in the dashboard before installing everything enmass.
 
