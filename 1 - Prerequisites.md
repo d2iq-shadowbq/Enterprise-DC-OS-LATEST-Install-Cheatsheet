@@ -24,7 +24,7 @@ edit /etc/bashrc (Comment out this line and add the following as below)
 
 \# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
 
-Bootstrap Node:
+Bootstrap Node:/n
 PS1='BOOTSTRAP \W $ ' 
 
 Master Node:
