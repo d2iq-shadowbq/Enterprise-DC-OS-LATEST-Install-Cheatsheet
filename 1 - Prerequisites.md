@@ -21,25 +21,25 @@ sudo visudo
 
 ### OPTIONAL: Set PS1 for each node
 edit /etc/bashrc (Comment out this line and add the following as below)
-
+```
 \# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
-
+```
 Bootstrap Node:
-
+```
 PS1='BOOTSTRAP \W $ ' 
-
+```
 Master Node:
-
+```
 PS1='Master1 \W $ ' 
-
+```
 Private Node:
-
+```
 PS1='Private1 \W $ ' 
-
+```
 Public Node:
-
+```
 PS1='Public1 \W $ ' 
-
+```
 
 ### Update Centos to 7.5 If Necessary
 ```
