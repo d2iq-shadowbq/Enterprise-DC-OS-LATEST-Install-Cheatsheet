@@ -24,7 +24,18 @@ edit /etc/bashrc (Comment out this line and add the following as below)
 
 \# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
 
+Bootstrap Node:
 PS1='BOOTSTRAP \W $ ' 
+
+Master Node:
+PS1='Master1 \W $ ' 
+
+Private Node:
+PS1='Private1 \W $ ' 
+
+Public Node:
+PS1='Public1 \W $ ' 
+
 
 ### Update Centos to 7.5 If Necessary
 ```
@@ -101,3 +112,5 @@ sudo docker ps
 sudo reboot
 ```
 [Proceed to step "2" and prepare your bootstrap node.](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap_Preparation.md)
+
+[If bootstrap is already setup proceed to step "3".](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/3%20-%20Installation.md)
