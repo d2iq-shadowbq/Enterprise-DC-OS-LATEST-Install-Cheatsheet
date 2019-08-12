@@ -22,7 +22,7 @@ sudo visudo
 ### OPTIONAL: Set PS1 for each node
 edit /etc/bashrc (Comment out this line and add the following as below)
 ```
-\# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
+# \[ "$PS1" = "\\s-\\v\\\$ " \] && PS1="\[\u@\h \w\]\\$ "
 ```
 Bootstrap Node:
 ```
@@ -93,11 +93,6 @@ sudo su
 ```
 
 ### Install, Start, and Enable Docker
-Got to figure this out by OS
-```
-mkfs -t xfs -n ftype=1 /dev/sdc1
-```
-
 Docker 18.09 Install:
 ```
 curl -O  https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-18.09.2-3.el7.x86_64.rpm
