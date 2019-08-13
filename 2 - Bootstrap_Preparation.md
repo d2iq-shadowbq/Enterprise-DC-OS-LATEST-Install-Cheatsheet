@@ -37,6 +37,14 @@ echo $(ip addr show ens192 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]
 EOF
 ```
 
+If problems with newline...
+```
+#!/usr/bin/env bash
+set -o nounset -o errexit
+export PATH=/usr/sbin:/usr/bin:$PATH
+echo $(ip addr show ens192 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1) | tr -d '\n'
+```
+
 ### Create Fault Domain Detect Script
 This example reads 2 files (/var/region and /var/zone) to populate the @region and @zone labels on dcos nodes.  For other examples , please see the documentation  
 ```
