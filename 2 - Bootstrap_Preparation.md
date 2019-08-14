@@ -11,6 +11,16 @@ cd dcos-install
 For cloud specific ip-detect scripts, [please see the docs](https://docs.mesosphere.com/1.13/installing/production/deploying-dcos/installation/#create-an-ip-detection-script).
 
 ### Check network interface name on-prem
+Should primarily use this ip-detect (route based)
+
+- Change the MASTER_IP to a master's IP : )
+```
+#!/usr/bin/env bash
+set -o nounset -o errexit
+MASTER_IP=172.28.128.3
+echo $(/usr/sbin/ip route show to match $MASTER_IP | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+```
+
 Need to know for ip-detect script below
 ```
 ip addr
