@@ -54,6 +54,8 @@
   
     - journalctl -fu dcos-mesos-master?
     
+[Official Debugging](https://docs.d2iq.com/mesosphere/dcos/1.13/installing/troubleshooting/)
+    
 4. Forget about uninstallation to update something
 
     - https://dcosjira.atlassian.net/browse/DCOS-250
