@@ -22,6 +22,7 @@ echo $(/usr/sbin/ip route show to match $MASTER_IP | grep -Eo '[0-9]{1,3}\.[0-9]
 ```
 
 If the above works, then skip down to 'Create Fault Domain' section
+
 Otherwise: Need to know for ip-detect scripts below
 ```
 ip addr
@@ -38,6 +39,8 @@ echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1
 EOF
 ```
 CentOS (on VMware - ens165, 192; on AWS - ens5): Would like this to pick up ens*
+
+- Change the INTERFACE_LABEL below
 ```
 cat > genconf/ip-detect << 'EOF'
 #!/usr/bin/env bash
