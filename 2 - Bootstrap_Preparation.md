@@ -18,10 +18,11 @@ Should primarily use this ip-detect (route based)
 #!/usr/bin/env bash
 set -o nounset -o errexit
 MASTER_IP=172.28.128.3
-echo $(/usr/sbin/ip route show to match $MASTER_IP | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+echo $(/usr/sbin/ip route show to match $MASTER_IP | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1) | tr -d '\n'
 ```
 
-Need to know for ip-detect script below
+If the above works, then skip down to 'Create Fault Domain' section
+Otherwise: Need to know for ip-detect scripts below
 ```
 ip addr
 
@@ -33,26 +34,17 @@ cat > genconf/ip-detect << 'EOF'
 #!/usr/bin/env bash
 set -o nounset -o errexit
 export PATH=/usr/sbin:/usr/bin:$PATH
-echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1) | tr -d '\n'
 EOF
 ```
-CentOS (on VMware):
-Would like this to pick up ens*
+CentOS (on VMware): Would like this to pick up ens*
 ```
 cat > genconf/ip-detect << 'EOF'
 #!/usr/bin/env bash
 set -o nounset -o errexit
 export PATH=/usr/sbin:/usr/bin:$PATH
-echo $(ip addr show ens192 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
-EOF
-```
-
-If problems with newline...
-```
-#!/usr/bin/env bash
-set -o nounset -o errexit
-export PATH=/usr/sbin:/usr/bin:$PATH
 echo $(ip addr show ens192 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1) | tr -d '\n'
+EOF
 ```
 
 ### Create Fault Domain Detect Script
