@@ -37,13 +37,14 @@ export PATH=/usr/sbin:/usr/bin:$PATH
 echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1) | tr -d '\n'
 EOF
 ```
-CentOS (on VMware): Would like this to pick up ens*
+CentOS (on VMware - ens165, 192; on AWS - ens5): Would like this to pick up ens*
 ```
 cat > genconf/ip-detect << 'EOF'
 #!/usr/bin/env bash
 set -o nounset -o errexit
 export PATH=/usr/sbin:/usr/bin:$PATH
-echo $(ip addr show ens192 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1) | tr -d '\n'
+INTERFACE_LABEL=ens192               # If necessary, will eventually make this automatic
+echo $(ip addr show $INTERFACE_LABEL | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1) | tr -d '\n'
 EOF
 ```
 
