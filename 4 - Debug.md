@@ -42,7 +42,7 @@
         
     - Find failured services then dig into logs
 
-  - Zookeeper (http://"<ip>":8181/exhibitor/v1/ui/index.html)
+  - Zookeeper (http://\<ip\>:8181/exhibitor/v1/ui/index.html)
         
     - journalctl -fu dcos-exhibitor
 
