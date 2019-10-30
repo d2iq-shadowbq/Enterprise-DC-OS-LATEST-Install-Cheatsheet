@@ -201,13 +201,13 @@ The Mesos masters must be up and running with a leader elected before Mesos-DNS 
 ### Component logs
 During DC/OS installation, each of the components will converge from a failing state to a running state in the logs.
 
-[Admin Router](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#admin-router)
-[DC/OS agent nodes](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#dcos-agent-nodes)
-[DC/OS Marathon](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#dcos-marathon)
-[gen_resolvconf](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#gen-resolvconf)
-[Mesos DNS](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#mesos-dns)
-[Mesos master process](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#mesos-master-process)
-[ZooKeeper and Exhibitor](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#zookeeper-and-exhibitor)
+- [Admin Router](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#admin-router)
+- [DC/OS agent nodes](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#dcos-agent-nodes)
+- [DC/OS Marathon](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#dcos-marathon)
+- [gen_resolvconf](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#gen-resolvconf)
+- [Mesos DNS](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#mesos-dns)
+- [Mesos master process](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#mesos-master-process)
+- [ZooKeeper and Exhibitor](https://docs.mesosphere.com/1.11/installing/ent/troubleshooting/#zookeeper-and-exhibitor)
 
 #### Admin Router
 The Admin Router is started on the master nodes. The Admin Router provides central authentication and proxy to DC/OS services within the cluster. This allows you to administer your cluster from outside the network without VPN or a SSH tunnel. For HA, an optional load balancer can be configured in front of each master node, load balancing port 80, to provide failover and load balancing.
