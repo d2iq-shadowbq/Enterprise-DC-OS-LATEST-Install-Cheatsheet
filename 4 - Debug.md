@@ -61,10 +61,28 @@
   - journalctl -fu dcos-mesos-slave.service
 - dcos-adminrouter-agent.service
 
-[Official Triage](https://mesosphere.lightning.force.com/lightning/r/Knowledge__kav/ka0f1000000kCJRAA2/view)
 
 ### General Install Triage Steps
-1. Collect a DC/OS log bundle
+
+[Official Triage - D2iQ Accessable](https://mesosphere.lightning.force.com/lightning/r/Knowledge__kav/ka0f1000000kCJRAA2/view)
+
+1. [Collect a DC/OS log bundle](https://support.d2iq.com/s/article/Create-a-DC-OS-Diagnostic-bundle)
+
+DC/OS Diagnostic Bundle:
+```
+dcos node diagnostics create all
+dcos node diagnostics --status
+(wait for progress to reach 100%)
+dcos node diagnostics download <bundle_name>
+```
+* May also use `masters` or  `ip_of_agent` in place of `all`
+
+Backup plan:
+```
+d=$(date -u +%Y%m%d-%H%M%S) && mkdir /tmp/journal-logs-${d} && sudo dmesg -T > /tmp/journal-logs-${d}/dmesg_t.log && for unit in $(systemctl list-units --no-legend --no-pager --plain 'dcos-*' | awk '{print $1}'); do echo "Saving logs for ${unit}"; journalctl -au ${unit} > /tmp/journal-logs-${d}/${unit}.log; done && tar -czvf $(hostname -f)-journal-logs-${d}.tgz -C /tmp/journal-logs-${d}/ .
+```
+* This will produce a file called `{hostname}-journal-logs-{date}.tgz`, which you can then upload to the ticket.
+
 2. Verify you have a valid IP detect﻿⁠⁠⁠⁠ script, functioning DNS resolvers to bind the DC/OS services to, and that all nodes are synchronized with NTP.
 - Exhibitor
 - Mesos master
