@@ -54,18 +54,15 @@
   
     - journalctl -fu dcos-mesos-master?
     
- NODE
- - systemctl status dcos-mesos-slave.service
- - journalctl -fu dcos-mesos-slave.service
- Oct 30 09:25:49 localhost.localdomain mesos-agent[14059]: ping: ready.spartan: Name or service not known
-
-- dcos-adminrouter-agent.service
-Oct 30 09:30:27 localhost.localdomain systemd[1]: dcos-adminrouter-agent.service holdoff time over, scheduling restart.
-Oct 30 09:30:27 localhost.localdomain systemd[1]: Stopped Admin Router Agent: exposes a unified control plane proxy for components and services using NGINX.
-Oct 30 09:30:27 localhost.localdomain systemd[1]: Starting Admin Router Agent: exposes a unified control plane proxy for components and services using NGINX...
-Oct 30 09:30:27 localhost.localdomain ping[15354]: ping: ready.spartan: Name or service not known
-
+4. In the private node
+ 
 - dcos-net.service (has to come up first)
+- systemctl status dcos-mesos-slave.service
+  - journalctl -fu dcos-mesos-slave.service
+- dcos-adminrouter-agent.service
+
+
+
 
  
 [Official Debugging](https://docs.d2iq.com/mesosphere/dcos/1.13/installing/troubleshooting/)
