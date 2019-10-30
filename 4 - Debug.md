@@ -38,31 +38,31 @@
 
 - Priorities:
 
- - systemctl status dcos-*
+  - systemctl status dcos-*
         
-  - Find failured services then dig into logs
+   - Find failured services then dig into logs
     
  - Spartan
   
-  - systemctl status dcos-spartan
+   - systemctl status dcos-spartan
 
  - Zookeeper (http://\<ip\>:8181/exhibitor/v1/ui/index.html)
         
-  - journalctl -u dcos-exhibitor
+   - journalctl -u dcos-exhibitor
 
  - Admin Router
     
-  - journalctl -u dcos-admin
+   - journalctl -u dcos-admin
     
  - Mesos Master
   
-  - journalctl -u dcos-mesos-master
+   - journalctl -u dcos-mesos-master
     
 4. In the private node
  
 - dcos-net.service (has to come up first)
 - systemctl status dcos-mesos-slave.service
- - journalctl -fu dcos-mesos-slave.service
+  - journalctl -fu dcos-mesos-slave.service
 - dcos-adminrouter-agent.service
 
 
