@@ -10,6 +10,7 @@ I suggest you start with the master node and wait for it to become fully healthy
 These files are referenced by the "fault-domain-defect" script run at agent startup
 
 **Deploy Fault Domain "region" File**
+
 Enter the @region where the node will live in place of `<region-name here>`
 ```
 sudo cat > /var/region << 'EOF'
@@ -18,6 +19,7 @@ EOF
 ```
 
 **Deploy Fault Domain "zone" File**
+
 Enter the @zone where the node will live in place of `<zone-name here>`
 ```
 sudo cat > /var/zone << 'EOF'
