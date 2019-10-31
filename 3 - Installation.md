@@ -4,9 +4,12 @@
 I suggest you start with the master node and wait for it to become fully healthy.  That way, you have a pretty good assurance that all of your prerequisites were done correctly.  In fact, I would install one of each type of node, and wait for it to become healthy in the dashboard before installing everything enmass.
 
 ## Set Region and Zone Labels on All Nodes
+
+**Skip this section if you don't have multiple domains**
+
 These files are referenced by the "fault-domain-defect" script run at agent startup
 
-### Deploy Fault Domain "region" File
+**Deploy Fault Domain "region" File**
 Enter the @region where the node will live in place of `<region-name here>`
 ```
 sudo cat > /var/region << 'EOF'
@@ -14,7 +17,7 @@ sudo cat > /var/region << 'EOF'
 EOF
 ```
 
-### Deploy Fault Domain "zone" File
+**Deploy Fault Domain "zone" File**
 Enter the @zone where the node will live in place of `<zone-name here>`
 ```
 sudo cat > /var/zone << 'EOF'
