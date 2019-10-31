@@ -1,6 +1,8 @@
 # Enterprise DC/OS - Prepare Bootstrap Node
 After installing the [Prerequisites](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md) on all nodes including the bootstrap nodes, do the following on the server designated as the Bootstrap node.
 
+### Get to the Bootstrap's shell
+
 ### Create Bootstrap Directories in Home Directory
 ```
 mkdir -p dcos-install/genconf
@@ -82,7 +84,7 @@ EOF
 
 ### Create config.yaml
 
-[Official Options:](https://docs.mesosphere.com/1.13/installing/production/deploying-dcos/configuration/examples/)
+[Official Options:](https://docs.d2iq.com/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/#enterprise-template-enterprise)
 This is an example config.yaml file with the minimum variables set.  The one optional variable set is the userID and password.  This is highly suggested if this cluster is to be at all exposed to the internet.  there are plenty of bitcoin miners out there that are looking for clusters with default user IDs and passwords.
 ```
 cat > genconf/config.yaml << 'EOF'
