@@ -14,8 +14,8 @@ The prerequisites are to be run one every cluster node (Masters, Public Agent, P
 NOTE: 
 - Bootstrap: Is only used for cluster installation, major changes (i.e. networking), upgrading and scaling.  It can be turned off (NOT deleted) when not doing these things.
 - Master: Preferred to have 3 nodes, but need an odd number (i.e. 1, 3, 5...).  If performance is critical, SSDs should be used for disk.
-- Private: Compute for tasks, jobs and containers.  Generally set to have no direct access to containers.
-- Public: ONLY should be used for direct access to containers.  LB / Ingress containers will reside here.
+- Private: Larger sized.  Compute for tasks, jobs and containers.  Generally set to have no direct access to containers.
+- Public: Less size.  Only should be used for direct access to containers.  LB / Ingress containers only will reside here.
 
 
 ## Prepare Node
