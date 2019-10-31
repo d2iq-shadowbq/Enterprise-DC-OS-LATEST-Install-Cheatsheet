@@ -110,7 +110,7 @@ sudo su
 ### Install, Start, and Enable Docker
 If this is your first time, perhaps [check here](https://docs.d2iq.com/mesosphere/dcos/version-policy/#centos-support-matrix-2) to make sure this documentation is up to date (10/31/2019 - yes, I work on Halloweeen :).
 
-Docker 18.09 Install:
+Docker 18.09.9 Install:
 ```
 curl -O  https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-18.09.9-3.el7.x86_64.rpm
 curl -O https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-cli-18.09.9-3.el7.x86_64.rpm
