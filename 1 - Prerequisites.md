@@ -7,6 +7,17 @@ The prerequisites are to be run one every cluster node (Masters, Public Agent, P
 
 [DC/OS 1.13](https://docs.mesosphere.com/version-policy/)
 
+## Install Nodes
+
+[Bootstrap, Master, Private, Public Requirements](https://docs.d2iq.com/mesosphere/dcos/2.0/installing/production/system-requirements/)
+
+NOTE: 
+- Bootstrap: Is only used for cluster installation, major changes (i.e. networking), upgrading and scaling.  It can be turned off (NOT deleted) when not doing these things.
+- Master: Preferred to have 3 nodes, but need an odd number (i.e. 1, 3, 5...).  If performance is critical, SSDs should be used for disk.
+- Private: Compute for tasks, jobs and containers.  Generally set to have no direct access to containers.
+- Public: ONLY should be used for direct access to containers.  LB / Ingress containers will reside here.
+
+
 ## Prepare Node
 
 ### Log In and change to SU
