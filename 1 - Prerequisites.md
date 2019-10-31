@@ -29,6 +29,10 @@ sudo su
 ```
 sudo visudo
 ```
+OR edit /etc/sudoers
+```
+%wheel ALL=(ALL) NOPASSWD: ALL
+```
 
 ### OPTIONAL: Set PS1 for each node
 edit /etc/bashrc (Comment out this line and add the following as below)
