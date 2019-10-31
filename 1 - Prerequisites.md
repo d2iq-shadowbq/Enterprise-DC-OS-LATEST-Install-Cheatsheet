@@ -1,5 +1,5 @@
 # Enterprise DC/OS latest Prerequisites Installation Guide
-## Updated for DC/OS 2.0
+## Updated for DC/OS 2.0, valid for DC/OS 1.13 and should be good for DC/OS 1.12 and 1.11
 
 The prerequisites are to be run one every cluster node (Masters, Public Agent, Private Agent) including the Bootstrap node
 
