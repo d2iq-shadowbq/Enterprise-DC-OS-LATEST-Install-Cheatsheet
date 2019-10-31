@@ -10,7 +10,7 @@ cd dcos-install
 ```
 
 ### Create IP-detect
-For cloud specific ip-detect scripts, [please see the docs](https://docs.mesosphere.com/1.13/installing/production/deploying-dcos/installation/#create-an-ip-detection-script).
+For cloud specific ip-detect scripts, [please see the docs](https://docs.d2iq.com/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/#use-the-aws-metadata-server).
 
 ### Check network interface name on-prem
 Should primarily use this ip-detect (route based)
