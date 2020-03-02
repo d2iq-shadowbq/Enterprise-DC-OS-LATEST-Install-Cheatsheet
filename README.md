@@ -6,7 +6,7 @@ It is broken into three steps:
 
 [1. Prerequisites:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/1%20-%20Prerequisites.md) To be installed on all nodes including Boodstrap, Master, and Agents
 
-[2. Bootstrap Preparation:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap%20Preparation.md) Prepares the installation and configuration files on the Bootstrap node.
+[2. Bootstrap Preparation:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/2%20-%20Bootstrap_Preparation.md) Prepares the installation and configuration files on the Bootstrap node.
 
 [3. Install:](https://github.com/jdyver/Enterprise-DC-OS-LATEST-Install-Cheatsheet/blob/master/3%20-%20Installation.md)  Deploys individual software to the nodes based on the cluster node type
 
