@@ -31,7 +31,7 @@ EOF
 
 **Skip this section if you don't have to use your VPC**
 
-[Existing VPC configiration link](https://github.com/dcos-terraform/examples/tree/master/aws/existing-vpc)
+[Existing VPC configuration link](https://github.com/dcos-terraform/examples/tree/master/aws/existing-vpc)
 
 ## Install Enterprise DC/OS Cluster Node Software
 First SSH into the individual node and execute the command based on its node type
