@@ -3,7 +3,7 @@
 
 I suggest you start with the master node and wait for it to become fully healthy.  That way, you have a pretty good assurance that all of your prerequisites were done correctly.  In fact, I would install one of each type of node, and wait for it to become healthy in the dashboard before installing everything enmass.
 
-## Set Region and Zone Labels on All Nodes
+## OPTIONAL: Set Region and Zone Labels on All Nodes
 
 **Skip this section if you don't have multiple domains**
 
@@ -26,6 +26,12 @@ sudo cat > /var/zone << 'EOF'
 <zone-name here>
 EOF
 ```
+
+## OPTIONAL: Use Existing VPC
+
+**Skip this section if you don't have to use your VPC**
+
+[Existing VPC configiration link](https://github.com/dcos-terraform/examples/tree/master/aws/existing-vpc)
 
 ## Install Enterprise DC/OS Cluster Node Software
 First SSH into the individual node and execute the command based on its node type
